@@ -33,11 +33,14 @@ basic.forever(function () {
             score += 1
         } else if (a != x) {
             led.unplot(x, y)
-            break;
-basic.showString("SCORES")
+            basic.showString("Score:")
+            basic.showString("" + (score))
+            basic.clearScreen()
+            score = 0
         }
         x = randint(0, 4)
         y = 0
         led.plot(x, y)
+        led.plot(a, b)
     }
 })
